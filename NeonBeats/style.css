@@ -54,7 +54,7 @@ body {
 
 .indicator.active{
     background-color: red;
-    box-shadow: 0 0 3px red;
+    box-shadow: 0 0 25px rgb(255, 115, 0);
     animation: blink 1s infinite;
 }
 

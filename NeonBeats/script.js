@@ -15,6 +15,9 @@ const recBtn = document.getElementById('recBtn');
 const stopBtn = document.getElementById('stopBtn');
 const playBtn = document.getElementById('playBtn');
 const recIndicator = document.getElementById('recIndicator');
+const metronom = document.getElementById('metronom');
+const metronomSlider = document.getElementById('metronomSlider');
+let isMetronom = false;
 
 let recordedSequence = [];
 let isRecording = false;
@@ -28,6 +31,19 @@ function playSound(key) {
     audio.volume = currentVolume;
     audio.currentTime = 0;
     audio.play();
+
+    const pad = document.querySelector(`.pad[data-key="${key}"]`);
+    if(pad){
+        pad.classList.add('active');
+        setTimeout(() => pad.classList.remove('active'), 100);
+    }
+
+    if (isRecording){
+        recordedSequence.push({
+            key: key,
+            time: Date.now() - startTime,
+        });
+    }
 }
 
 window.addEventListener('keydown', (e) => {
@@ -35,4 +51,44 @@ window.addEventListener('keydown', (e) => {
     playSound(key);
 });
 
-function 
+pads.forEach(pad => {
+    pad.addEventListener('click', () => {
+        playSound(pad.dataset.key);
+    })
+});
+
+volumeSlider.addEventListener('input', (event)=>{
+        currentVolume = event.target.value;
+
+});
+
+recBtn.addEventListener('click', ()=>{
+    isRecording = true;
+    recordedSequence = [];
+    startTime = Date.now();
+    recIndicator.classList.add('active');
+});
+
+stopBtn.addEventListener('click', () => {
+    isRecording = false;
+    recIndicator.classList.remove('active');
+});
+
+playBtn.addEventListener('click', () => {
+    if (recordedSequence.length === 0) return;
+    recordedSequence.forEach(item => {
+        setTimeout(() => {
+            playSound(item.key);
+        }, item.time);
+    });
+});
+
+
+function funcMetronom(){
+    if (!isMetronom) return;
+    playSound('A');
+}
+
+metronom.addEventListener('click', (event) => {
+    setInterval(funcMetronom(), (60 / metronomSlider.value) * 1000)
+});
