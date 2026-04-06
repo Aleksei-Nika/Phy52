@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex; flex-direction: column;">
+    <button onclick="greet()">Нажми на меня</button>
+    <button id="property">Через свойство DOM-объекта</button>
+    <button id="listener">!!!</button>
+    <a href="https://www.google.com" id="link">ССЫЛКА</a>
+
+    <div id="parent">
+        <p>Вложенный параграф 1</p>
+        <p>Вложенный параграф 2</p>
+        <p>Вложенный параграф 3</p>
+    </div>
+
+    <script>
+        function greet() {
+            alert("Hello");
+            console.log(event.type);
+            console.log(event.target);
+            console.log(event.clientX, event.clientY);
+        }
+        const btn = document.getElementById('property');
+        btn.onclick = function() {
+            console.log('CLICK')
+        };
+        const btn2 = document.getElementById('listener');
+        function sayHello() {alert('Слушатель');}
+        function logConsole() {console.log('log click');}
+
+        btn2.addEventListener('click', sayHello);
+
+        btn2.addEventListener('click', logConsole);
+
+        document.getElementById('link').addEventListener('click', function (event){
+            event.preventDefault();
+        })
+        //  Всплытие и погружение
+        // Погружение-событие идет сверху вниз от window до цели
+        // Цель - собыnие достигло цели
+        const list = document.getElementById('parent');
+        list.addEventListener('click', function (event) {
+            if (event.target.tagName === 'P') {
+                console.log(`нажат параграф: ${event.target.innerText}`);
+            }
+        });
+        // мышь - mousedown/mouseup, moseover, mousemove
+        // клавиатура - keydown/keyup
+        // формы отправки - submit, focus, input, chenge
+        // Документ - DOMContentLoaded()
+        // window.addEventListener('DOMContentLoaded', функция)
+    </script>
+</body>
+</html>

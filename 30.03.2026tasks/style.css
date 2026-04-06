@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #eee;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* ЗАДАЧА 1 */
+.external-link {
+    text-decoration: none;
+    border-bottom: 1px dashed black;
+}
+
+/* ЗАДАЧА 2 */
+#text-display {
+    padding: 10px;
+    border: 1px solid #ccc;
+    min-height: 50px;
+}
+
+#text-edit {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/* ЗАДАЧА 4 */
+#ball {
+    width: 5%;
+    height: 5%;
+    border-radius: 50%;
+    border-color: black;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+
+#field {
+    width: 90%;
+    height: 900px;
+    background-color: green;
+    position: relative;
+    overflow: hidden;
+    cursor: crosshair;
+}
+
+/* Задача 5 */
+
+.traffic-light {
+    width: 50px;
+    background: #333;
+    padding: 10px;
+    border-radius:  10px;
+}
+
+.lamp{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: gray;
+    margin: 10px auto;
+}
+
+.lamp.red{ background: red;}
+.lamp.yellow{ background: yellow;}
+.lamp.green{ background: green;}
+
+/* Задача 7 */
+#no-select{
+    user-select: none;
+    -wedkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+}
+
+#task8 {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9;
+    display: none;
+}
+
+#block-container {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.block {
+    width: 50px;
+    height: 50px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>NEON BEATS</h1>
+        <div class="control">
+            <button id="recBtn">Record</button>
+            <button id="stopBtn">Stop</button>
+            <button id="playBtn">Play</button>
+            <div id="recIndicatir" class="indicator"></div>
+            <input type="range" id="volumeSlider" min="0" max="100" step="10" value="50">
+            <span>Volume</span>
+        </div>
+        <div class="pad-grid">
+            <div class="pad" style="--color: #ff0055;" data-key="A">A</div>
+            <div class="pad" style="--color: #a2c95a;" data-key="S">S</div>
+            <div class="pad" style="--color: #4749b3;" data-key="D">D</div>
+            <div class="pad" style="--color: #dfb90f;" data-key="F">F</div>
+            <div class="pad" style="--color: #dd1e1e;" data-key="G">G</div>
+            <div class="pad" style="--color: #2cbb00;" data-key="H">H</div>
+            <div class="pad" style="--color: #34d17b;" data-key="J">J</div>
+            <div class="pad" style="--color: #9642e6;" data-key="K">K</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

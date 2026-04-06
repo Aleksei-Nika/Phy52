@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>0
+    <p id="element"></p>
+    <div class="test">DIV 1</div>
+    <div class="test">DIV 2</div>
+    <div class="test">
+        <span>ЭТО СПАН В ДИВЕ</span>
+    </div>
+    <p>ПАРАГРАФ БЕЗ ID</p>
+    <script>
+
+        console.log(document.getElementById('element'));
+        console.log(document.querySelector('.test'));
+        console.log(document.querySelectorAll('p'));
+        console.log(document.getElementsByTagName('div'));
+        console.log(document.getElementsByClassName('test'));
+
+        const box = document.getElementById('element');
+        box.innerHTML = '<b>HELLO</b>';
+        box.innerText = '<b>HELLO</b>';
+        box.style.backgroundColor = 'red';
+        box.style.color = 'white';
+        console.log(box.id);
+
+        box.innerHTML += '<a href="#">LINK</a>';
+
+        const link = document.querySelector('a');
+        link.setAttribute('href', 'https://ya.ru');
+                                                                                                                                                                                                                                                                                                                                                link.style.textDecoration = 'none';
+
+        link.classList.add('href');
+        link.re
+        link.className = 'link_class';
+
+
+
+        // if(window.confirm('Хотите открыть Google?')) {
+        //     window.open('https://www.google.com', '_blank', 'width=1000', 'height=500');
+        // }
+
+        // if (navigator.onLine) {
+        //     console.log('Вы онлайн! Ваш язык: ' + navigator.language)
+        // } else {
+        //     console.log('Соединения нет');
+        // }
+        // navigator.clipboard.writeText(`BOM BOM BOM`).then(() => {console.log('Текст скопирован')});
+
+        // console.log(location.protocol);
+        // console.log(location.pathname);
+
+        // console.log(screen.availWidth, screen.availHeight)
+        // console.log(screen.)
+
+
+    </script>
+</body>
+</html>

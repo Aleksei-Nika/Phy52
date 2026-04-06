@@ -1,0 +1,59 @@
+header {
+    width: 100%;
+    height: 15vh;
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    color: wheat;
+    font-size: 1.02rem;
+}
+
+#burger {
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+#burger span{
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+}
+
+.row{
+    width: 85%;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.col{
+    width: 20%;
+    height: 150px;
+    background-color: red;
+}
+
+@media (max-width: 420px){
+    nav{
+        display: none;
+
+    }
+    #burger{
+        display: flex;
+        margin: 20px;
+    }
+    header{
+        justify-content: flex-end;
+    }
+}

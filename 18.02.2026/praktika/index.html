@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#section1" class="nav-btn">Мониторинг</a>
+            <a href="#section2" class="nav-btn">Лог - терминал</a>
+            <a href="#section3" class="nav-btn">Настройки</a>
+        </nav>
+    </header>
+    <main>
+        <section id="section1" class="tab-content">
+            <h2>Статус системы</h2>
+            <div class="stats-grid">
+                <div class="stat-item"><!--карточка-->
+                    <span>CPU</span>
+                    <div class="progress-bar">
+                        <div class="fill" style="width: 25%;"></div>
+                    </div>
+                    <span>25%</span>
+                </div>
+                <div class="stat-item"><!--карточка-->
+                    <span>RAM</span>
+                    <div class="progress-bar">
+                        <div class="fill" style="width: 70%;"></div>
+                    </div>
+                    <span>5.6 GB</span>
+                </div>
+                <div class="stat-item"><!--карточка-->
+                    <span>DISK</span>
+                    <div class="progress-bar">
+                        <div class="fill" style="width: 45%;"></div>
+                    </div>
+                    <span>120 GB</span>
+                </div>
+            </div>
+        </section>
+        <section id="section2" class="tab-content"></section>
+        <section id="section3" class="tab-content"></section>
+    </main>
+
+</body>
+</html>

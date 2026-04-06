@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FORMS</title>
+</head>
+<body>
+    <!-- GET - отправляются в открытом виде https://example.com?p1=val1&p2=val2&p3=val3
+    POST - HTTP протокол -->
+    <!-- action="/" отправляет данные -->
+    <form method="get">
+        <div>
+            <label for="name">Имя:</label>
+            <input id="name" type="text" name="username" placeholder="Введите своё имя" required value="Значение имени">
+        </div>
+        <div>
+            <label for="number">Кол-во приборов:</label>
+            <input id="number" type="number" value="0" min="0" max="10" step="1" name="number">
+        </div>
+        <div>
+            <label for="password">Пароль:</label>
+            <input id="password" type="password" name="password">
+        </div>
+        <div>
+            <label for="email">E-mail:</label>
+            <input id="email" type="email" name="email">
+        </div>
+        <div>
+            <label for="checkbox">checbox</label>
+            <input id="checkbox" type="checkbox" name="checkbox" checked>
+        </div>
+        <div>
+            <label>Дата:</label>
+            <input type="date">
+        </div>
+        <div>
+            <label>Время:</label>
+            <input type="time">
+        </div>
+        <div>
+            <label>цвет:</label>
+            <input type="color">
+        </div>
+        <div>
+            <label>файл:</label>
+            <input type="file">
+        </div>
+        <div>
+            <label>радио кнопки</label>
+            <input type="radio" value="1" name="pol">1
+            <input type="radio" value="2" name="pol">2
+            <input type="radio" value="3" name="pol">3
+            <input type="radio" value="4" name="pol">4
+        </div>
+        <div>
+            <textarea name="comment" rows="3" cols="15" minlength="20" maxlength="25" style="resize: none;"></textarea>
+        </div>
+        <select name="choise">
+            <option>1| .</option>
+            <option>2| ..</option>
+            <option>3| ...</option>
+            <option>4| ....</option>
+        </select>
+        <div>
+            <button type="submit">Отправить</button>
+            <button type="reset">Очистить</button>
+        </div>
+
+    </form>
+</body>
+</html>
