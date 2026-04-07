@@ -9,6 +9,8 @@ const sounds = {
     'K': 'sounds/K.wav',
 }
 
+const soundMetronom = 'sounds/metronom.mp3';
+
 const pads = document.querySelectorAll('.pad');
 const volumeSlider = document.getElementById('volumeSlider');
 const recBtn = document.getElementById('recBtn');
@@ -85,10 +87,17 @@ playBtn.addEventListener('click', () => {
 
 
 function funcMetronom(){
-    if (!isMetronom) return;
-    playSound('A');
+    if (!isMetronom) clearInterval(funcMetronom);
+    const audio = new Audio(soundMetronom);
+    audio.volume = currentVolume;
+    audio.currentTime = 0;
+    audio.play();
 }
 
 metronom.addEventListener('click', (event) => {
-    setInterval(funcMetronom(), (60 / metronomSlider.value) * 1000)
+    console.log((60 / metronomSlider.value) * 1000);
+    c
+    setInterval(() => {
+        
+    }, (60 / metronomSlider.value) * 1000);
 });
